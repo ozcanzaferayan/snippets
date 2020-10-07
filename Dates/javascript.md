@@ -70,4 +70,47 @@ console.log(shortMonthText) // "Ali Bey ile 14 Kas 2022'de toplantım var."
 <hr>
 You can use the code below to convert the dates to Turkish.
 
-`loading...`
+```js
+var longDayText = "Ali Bey ile Tuesday'de toplantım var.";
+var shortDayText = "Ali Bey ile Tue'de toplantım var.";
+
+var longDayReplace = {
+  Monday: "Pazartesi",
+  monday: "pazartesi",
+  Tuesday: "Salı",
+  tuesday: "salı",
+  Wednesday: "Çarşamba",
+  wednesday: "çarşamba",
+  Thursday: "Perşembe",
+  thursday: "perşembe",
+  Friday: "Cuma",
+  friday: "cuma",
+  Saturday: "Cumartesi",
+  saturday: "cumartesi",
+  Sunday: "Pazar",
+  sunday: "pazar",
+};
+
+var shortDayReplace = {
+  Mon: "Pt",
+  mon: "pt",
+  Tue: "Sa",
+  tue: "sa",
+  Wed: "Ça",
+  wed: "ça",
+  Thu: "Pe",
+  thu: "pe",
+  Fri: "Cu",
+  fri: "cu",
+  Sat: "Ct",
+  sat: "ct",
+  Sun: "Pz",
+  sun: "pz",
+};
+
+longDayText = longDayText.replace(new RegExp("(" + Object.keys(longDayReplace).map(function(i){return i.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&")}).join("|") + ")", "g"), function(s){ return longDayReplace[s]});
+shortDayText = shortDayText.replace(new RegExp("(" + Object.keys(shortDayReplace).map(function(i){return i.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&")}).join("|") + ")", "g"), function(s){ return shortDayReplace[s]});
+
+console.log(longDayText) // "Ali Bey ile Salı'de toplantım var."
+console.log(shortDayText) // "Ali Bey ile Sa'de toplantım var."
+```
