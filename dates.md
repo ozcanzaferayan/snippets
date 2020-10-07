@@ -67,3 +67,7 @@ shortMonthText = shortMonthText.replace(new RegExp("(" + Object.keys(shortMonthR
 console.log(longMonthText) // "Ali Bey ile 14 Ağustos 2022'de toplantım var."
 console.log(shortMonthText) // "Ali Bey ile 14 Kas 2022'de toplantım var."
 ```
+
+You can use the code below to convert the months to Turkish.
+
+`loading...`
