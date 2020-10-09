@@ -1,5 +1,5 @@
 
-### TurkishMobileNumbers
+### IsTurkishMobileNumber
 You can use the code below to check if given mobile phone number valid according to Turkish mobile number pattern.
 
 ```js
