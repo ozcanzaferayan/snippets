@@ -50,7 +50,7 @@ public class LocaleHelper {
 
         Resources res = context.getResources();
         Configuration config = new Configuration(res.getConfiguration());
-        if (LocaleUtilityHelper.isAtLeastVersion(JELLY_BEAN_MR1)) {
+        if (isAtLeastVersion(JELLY_BEAN_MR1)) {
             config.setLocale(locale);
             context = context.createConfigurationContext(config);
         } else {
@@ -62,7 +62,7 @@ public class LocaleHelper {
 
     public static Locale getLocale(Resources res) {
         Configuration config = res.getConfiguration();
-        return LocaleUtilityHelper.isAtLeastVersion(N) ? config.getLocales().get(0) : config.locale;
+        return isAtLeastVersion(N) ? config.getLocales().get(0) : config.locale;
     }
 
 
@@ -78,5 +78,9 @@ public class LocaleHelper {
             Toast.makeText(activity, "Dil değiştirildi", Toast.LENGTH_SHORT).show();
         }
         return true;
+    }
+
+    public static boolean isAtLeastVersion(int version) {
+        return Build.VERSION.SDK_INT >= version;
     }
 }
