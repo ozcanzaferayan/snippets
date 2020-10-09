@@ -5,7 +5,7 @@ You can use the code below to convert the countries to Turkish. (Don't forget to
 ```js
 const { countries } = require("./countriesData");
 
-let filterCountries = countries?.find(({ name }) => name === "Turkey");
+let filterCountries = countries.find(({ name }) => name === "Turkey");
 
 console.log(
   `${filterCountries.name}(${filterCountries.code}) olan ülkenin Türkçesi: ${filterCountries.tr_name}`
