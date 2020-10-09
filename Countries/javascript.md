@@ -1,9 +1,9 @@
 
 ### Countries
-You can use the code below to convert the countries to Turkish.
+You can use the code below to convert the countries to Turkish. (Don't forget to import countriesData.js file in your project)
 
 ```js
-const { countries } = require("./countriesDdata");
+const { countries } = require("./countriesData");
 
 let filterCountries = countries?.find(({ name }) => name === "Turkey");
 
