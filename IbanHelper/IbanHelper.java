@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IbanHelper {
-    public static boolean isCheckDigitValid(String iban) {
+    public static boolean isValid(String iban) {
         if (null == iban) return false;
 
         int validIBANLength = getValidIBANLength(iban);
