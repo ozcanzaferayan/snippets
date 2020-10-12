@@ -2,7 +2,7 @@
 Useful snippets for everyday usage
 
 # Titles
-- [Special for Android Java](../tree/main/Android)
+- [Special for Android Java](/tree/main/Android)
   - [AppSignatureHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/AppSignatureHelper)
   - [CacheHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/CacheHelper)
   - [DialogHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/DialogHelper)
