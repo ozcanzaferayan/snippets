@@ -2,11 +2,10 @@
 Useful snippets for everyday usage
 
 # Titles
-- [Specieal for Android Java](https://github.com/ozcanzaferayan/snippets/tree/main/Android)
+- [Special for Android Java](./tree/main/Android)
   - [AppSignatureHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/AppSignatureHelper)
   - [CacheHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/CacheHelper)
   - [DialogHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/DialogHelper)
-  - [IbanHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/IbanHelper)
   - [KeyboardHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/KeyboardHelper)
   - [LocaleHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/LocaleHelper)
   - [LocationHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/LocationHelper)
