@@ -1,6 +1,6 @@
 # snippets
 Useful snippets for everyday usage
-![Project Image](./_art/social.png)
+![Project Image](./.art/social.png)
 # Titles
 - [Special for Android Java](https://github.com/ozcanzaferayan/snippets/tree/main/Android)
   - [AppSignatureHelper](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/AppSignatureHelper)
