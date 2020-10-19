@@ -17,6 +17,7 @@ Useful snippets for everyday usage
 - [TurkishCharactersReplacer](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/TurkishCharactersReplacer)
 - [TurkishCharactersReplacerIncludesUnicode](https://github.com/ozcanzaferayan/snippets/tree/main/Android/Java/TurkishCharactersReplacerIncludesUnicode)
 - [Mobile Number for Turkey](https://github.com/ozcanzaferayan/snippets/tree/main/TurkishMobileNumberValidator)
+- [Randomly Rewrite to The Existing Array](https://github.com/ozcanzaferayan/snippets/tree/main/RandomlyRewriteArray)
 
 # Contribution
 If you want to contribute to the project with a new title or a language that does not exist in title, fork the project and send the changes you made with a pull request.
