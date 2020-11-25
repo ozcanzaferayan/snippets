@@ -1,9 +1,8 @@
 export function isValid(iban) {
     if (iban == null) return false;
 
-    let validIBANLength = getValidIBANLength(iban);
-    if (validIBANLength < 4) return false;
-    if (iban.length != validIBANLength) return false;
+    if (!isIBANLengthValid(iban))
+        return false;
 
     let numericIBAN = getNumericIBAN(iban, false);
 
@@ -11,8 +10,9 @@ export function isValid(iban) {
     return checkDigit == 1;
 }
 
-function getValidIBANLength(countryCode) {
-    const code = countryCode.substring(0, 2).toUpperCase();
+function isIBANLengthValid(iban) {
+    const code = iban.substring(0, 2).toUpperCase();
+
     const countryMap = {
         "AD": 24,
         "AT": 20,
@@ -59,8 +59,10 @@ function getValidIBANLength(countryCode) {
         "TN": 24,
         "TR": 26
     }
+
     const lengthOfCountry = countryMap[code];
-    return lengthOfCountry == null ? -1 : lengthOfCountry;
+    
+    return lengthOfCountry == null ? false : iban.length == lengthOfCountry;
 }
 
 function getAlphabetPosition(letter) {

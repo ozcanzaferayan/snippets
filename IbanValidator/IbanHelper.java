@@ -8,17 +8,17 @@ public class IbanHelper {
     public static boolean isValid(String iban) {
         if (null == iban) return false;
 
-        int validIBANLength = getValidIBANLength(iban);
-        if (validIBANLength < 4) return false;
-        if (iban.length() != validIBANLength) return false;
+        if(!isIBANLengthValid(iban))
+            return false;
 
         BigInteger numericIBAN = getNumericIBAN(iban, false);
 
         int checkDigit = numericIBAN.mod(new BigInteger("97")).intValue();
         return checkDigit == 1;
     }
-    public static int getValidIBANLength(String countryCode) {
-        String code = countryCode.substring(0,2).toUpperCase();
+    
+    public static int isIBANLengthValid(String iban) {
+        String code = iban.substring(0,2).toUpperCase();
         Map<String, Integer> countryMap = new HashMap<String, Integer>() {
             {
                 put("AD", 24);
@@ -67,8 +67,10 @@ public class IbanHelper {
                 put("TR", 26);
             }
         };
+
         Integer length = countryMap.get(code);
-        return length == null ?  -1 : length;
+
+        return length == null ? false : iban.length == length;
     }
 
     private static BigInteger getNumericIBAN(String iban, boolean isCheckDigitAtEnd) {
